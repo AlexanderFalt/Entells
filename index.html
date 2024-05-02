@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  type="text/css" href="css_order_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Main content | Entells</title>
+</head>
+<body>
+    <header>
+        <span class="logo-wrapper"><img src="logo_fp.png" alt="logo" id="logo_entelles"><h1>Entells</h1></span>
+    </header>
+    <div class="content-wrapper">
+        <nav>
+            <ul>
+                <li id="buttonPlacmentOne">
+                    <div class="content-wrapper-small" onmouseover='changeAnimation("buttonAnimationIn", "button_one", "#161A30");' onmouseout='changeAnimation("buttonAnimationOut", "button_one", "#F0ECE5");'>
+                        <button class="text_bubble" id="button_one" onclick="openMessageUI()">
+                            <i class="fa-solid fa-note-sticky"></i> Create new bubble
+                        </button>
+                    </div>
+                </li> <!--Write new message-->
+                <li id="buttonPlacmentTwo">
+                    <div class="content-wrapper-small" onmouseover='changeAnimation("buttonAnimationIn", "button_two", "#161A30");' onmouseout='changeAnimation("buttonAnimationOut", "button_two", "#F0ECE5");'>
+                        <button class="text_bubble" id="button_two" onclick="toggleDeleteMode()">
+                            <i class="fa-solid fa-trash"></i> Delete bubble
+                        </button>
+                    </div>
+                </li> <!--Delete message-->
+                <li id="buttonPlacementThree">
+                    <div class="content-wrapper-small" onmouseover='changeAnimation("buttonAnimationIn", "button_four", "#161A30");' onmouseout='changeAnimation("buttonAnimationOut", "button_four", "#F0ECE5");'>
+                        <button class="text_bubble" id="button_four" onclick="toggleEditMode()">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Edit bubble
+                        </button>
+                    </div>
+                </li> <!--Edit message-->
+                <li id="buttonPlacementFour">
+                    <div class="content-wrapper-small"  onmouseover='changeAnimation("buttonAnimationIn", "button_three", "#161A30");' onmouseout='changeAnimation("buttonAnimationOut", "button_three", "#F0ECE5");'>
+                        <button class="text_bubble" id="button_three" onclick="addColumn()">
+                            <i class="fa-solid fa-table-columns"></i> Add column
+                        </button>
+                    </div>
+                </li> <!--Add column-->
+                <li id="buttonPlacementFive">
+                    <div class="content-wrapper-small"  onmouseover='changeAnimation("buttonAnimationIn", "button_five", "#161A30");' onmouseout='changeAnimation("buttonAnimationOut", "button_five", "#F0ECE5");'>                    
+                        <button class="text_bubble" id="button_five" onclick="removeColumn()">
+                            <i class="fa-solid fa-minus"></i> Remove column
+                        </button>
+                    </div>
+                </li> <!--Remove column-->
+            </ul>
+        </nav>
+        <main id="main-part">
+            <div class="column-wrapper" id="wrapperOne"> <!--1 (Monday)-->
+                <input type="text" class="day_name" placeholder="Monday">
+            </div>
+            <div class="column-wrapper"> <!--2 (Tuesday)-->
+                <input type="text" class="day_name" placeholder="Tuesday">
+            </div>
+            <div class="column-wrapper"> <!--3 (Wensday)-->
+                <input type="text" class="day_name" placeholder="Wensday">
+            </div>
+            <div class="column-wrapper"> <!--4 (Thursday)-->
+                <input type="text" class="day_name" placeholder="Thursday">
+            </div>
+            <div class="column-wrapper"> <!--5 (Friday)-->
+                <input type="text" class="day_name" placeholder="Friday">
+            </div>
+            <div class="column-wrapper"> <!--6 (Saturday)-->
+                <input type="text" class="day_name" placeholder="Saturday">
+            </div>
+            <div class="column-wrapper"> <!--7 (Sunday)-->
+                <input type="text" class="day_name" placeholder="Sunday">
+            </div>
+        </main>
+    </div>
+    <footer id="footer-part">
+        <h4 class="mode-text" id="mode_text">Standard Mode</h4>
+    </footer>
+    <script src="js_order_page.js"></script>
+</body>
+</html>
